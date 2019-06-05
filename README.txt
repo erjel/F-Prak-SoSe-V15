@@ -16,7 +16,7 @@ cp -r /DATA/F-Praktikum/Data/* /home/<username>/Data*
 
 Mit Account auf GPU-Server einloggen und Docker Container starten:
 $ screen
-$ docker run --runtime=nvidia --rm --name ${USER}_jupyter_tensorflow -u $(id -u):$(id -g) -v /home/fprak/Data:/DATA -v ${HOME}/Notebooks:/tf/F_Praktikum -it tensorflow/tensorflow:1.13.1-gpu-py3-jupyter
+$ docker run --runtime=nvidia --rm --name ${USER}_jupyter_tensorflow -u $(id -u):docker -v /home/fprak/Data:/DATA -v ${HOME}/Notebooks:/tf/F_Praktikum -it tensorflow/tensorflow:1.13.1-gpu-py3-jupyter
 (Wenn die letzte Version ausprobieren mchte: tensorflow/tensorflow:latest-gpu-py3-jupyter)
 Ctrl-a c
 
